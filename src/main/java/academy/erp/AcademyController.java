@@ -40,7 +40,7 @@ public class AcademyController
 		return new ModelAndView("index");
 	}
 	
-	@RequestMapping(value="login",method=RequestMethod.POST)
+	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public ModelAndView home(@RequestParam("user") String user, @RequestParam("pass") String pass)
 	{
 		if(user.equals("razzak")&&pass.equals("rasheedha")) 
@@ -163,4 +163,8 @@ public class AcademyController
 		return new ModelAndView("updated").addObject("status", academy);
 	}
 	// Update by Course supported by Id from listing via Get ends Here
+	
+	/*
+	 * public ModelAndView remove() { return new ModelAndView("delete"); }
+	 */
 }
