@@ -20,7 +20,12 @@
 <td>${single.ano }</td><td>${single.name }</td><td>${single.address }</td><td>${single.institution }</td><td>${single.contactno }</td><td>${single.email }</td>
 <td>${single.course }</td><td>${single.courseamount }</td><td>${single.dateofjoined }</td><td>${single.firstpaid }</td><td>${single.firstdatepaid }</td>
 <td>${single.datetobepaid }</td><td>${single.finalpaid }</td><td>${single.certificate }</td><td>${single.dateofcompletion }</td>
-<td><a href="listeditid/${single.ano }/">Edit</a></td>
+<td>
+<ol>
+<li><a href="listeditid/${single.ano }/">Edit</a></li>
+<li><a href="listdeleteid/${single.ano }/">Delete</a></li>
+</ol>
+</td>
 </tr>
 </core:forEach>
 </table>

@@ -164,7 +164,13 @@ public class AcademyController
 	}
 	// Update by Course supported by Id from listing via Get ends Here
 	
-	/*
-	 * public ModelAndView remove() { return new ModelAndView("delete"); }
-	 */
+	@RequestMapping("/listdeleteid/{id}")
+	public ModelAndView remove(@PathVariable("id") int id)
+	{
+		Academy aca=repo.getOne(id);
+		String name=aca.getName();
+		repo.delete(aca);
+		return new ModelAndView("deleted").addObject("one", name);
+		//return new ModelAndView("list");
+	}
 }
